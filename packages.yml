@@ -1,3 +1,4 @@
+#packages
 packages:
   - git: "https://github.com/mbm-pbc-reporting/dbt_google_ads_source.git"
     revision: "main"
