@@ -51,6 +51,7 @@ fields as (
         accounts.currency_code,
         campaigns.campaign_name,
         campaigns.campaign_id,
+        campaigns.advertising_channel_type,
         ad_groups.ad_group_name,
         stats.ad_group_id,
         stats.ad_id,
@@ -79,7 +80,7 @@ fields as (
     left join accounts
         on campaigns.account_id = accounts.account_id
         and campaigns.source_relation = accounts.source_relation
-    {{ dbt_utils.group_by(15) }}
+    {{ dbt_utils.group_by(16) }}
 )
 
 select *
