@@ -40,7 +40,6 @@ fields as (
         campaigns.advertising_channel_type,
         stats.campaign_id,
         campaigns.advertising_channel_type,
-        campaigns.advertising_channel_subtype,
         campaigns.status,
         sum(stats.spend) as spend,
         sum(stats.clicks) as clicks,
