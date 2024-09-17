@@ -44,4 +44,4 @@ fields as (
 )
 
 select *
-from fields where lower(advertising_channel_type) LIKE '%search%'
+from fields 
