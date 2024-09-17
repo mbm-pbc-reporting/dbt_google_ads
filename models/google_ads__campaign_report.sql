@@ -37,6 +37,7 @@ fields as (
         accounts.account_id,
         accounts.currency_code,
         campaigns.campaign_name,
+        campaigns.advertising_channel_type,
         stats.campaign_id,
         campaigns.advertising_channel_type,
         campaigns.advertising_channel_subtype,
