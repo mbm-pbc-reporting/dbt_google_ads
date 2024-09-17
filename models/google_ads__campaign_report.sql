@@ -39,7 +39,7 @@ fields as (
         campaigns.campaign_name,
         campaigns.advertising_channel_type,
         stats.campaign_id,
-        campaigns.advertising_channel_type,
+        campaigns.advertising_channel_subtype,
         campaigns.status,
         sum(stats.spend) as spend,
         sum(stats.clicks) as clicks,
@@ -54,7 +54,7 @@ fields as (
     left join accounts
         on campaigns.account_id = accounts.account_id
         and campaigns.source_relation = accounts.source_relation
-    {{ dbt_utils.group_by(11) }}
+    {{ dbt_utils.group_by(10) }}
 )
 
 select *
