@@ -49,6 +49,7 @@ fields as (
         accounts.account_id,
         accounts.currency_code,
         campaigns.campaign_name,
+        campaigns.advertising_channel_type,
         campaigns.campaign_id,
         ad_groups.ad_group_name,
         stats.ad_group_id,
@@ -99,7 +100,7 @@ fields as (
         where ads.source_final_urls is not null
     {% endif %}
 
-    {{ dbt_utils.group_by(18) }}
+    {{ dbt_utils.group_by(19) }}
 )
 
 select *
